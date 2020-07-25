@@ -1,0 +1,319 @@
+//mixins
+@mixin a-cent($xy:xy)
+  @if $xy==xy
+    position: absolute
+    left: 50%
+    top: 50%
+    bottom: auto
+    right: auto
+    transform: translate(-50%, -50%)
+  @else if $xy==x
+    position: absolute
+    left: 50%
+    right: auto
+    transform: translateX(-50%)
+  @else if $xy==y
+    position: absolute
+    top: 50%
+    bottom: auto
+    transform: translateY(-50%)
+@mixin mt($s: .36)
+  transition: all #{$s}s
+// media helper
+// @media (min-width: 1200px) and (max-width: 1440px) //notebook
+// +media-breakpoint-down(xl) //up xl
+// +media-breakpoint-up(sm) //up sm
+// @media screen and (max-width: 480px) //
+.res-i
+	max-width: 100%
+	height: auto
+a
+	@include mt
++media-breakpoint-up(lg)
+	.order-lg-first
+		order: -1
+	.order-lg-last
+		order: 13
++media-breakpoint-up(md)
+	.order-md-first
+		order: -1
+	.order-md-last
+		order: 13
++media-breakpoint-up(sm)
+	.order-sm-first
+		order: -1
+	.order-sm-last
+		order: 13
+
+
+
+
+//main style
+.btn-red
+	display: block
+	text-align: center
+	background-color: $accent
+	border: solid 1px $accent
+	padding: 10px 0
+	font-size: 16px
+	color: #fff
+
+	&:hover
+		background-color: #fff
+		color: $accent
+
+.catalogInner
+	background-color:	#f0f0f0
+	padding-top: 80px
+	padding-bottom: 80px
+
+.catalogItem
+	margin-bottom: 60px
+	background-color: #fff
+	&__col
+		position: relative
+		// +media-breakpoint-up(lg)
+		// 	padding-left: 0
+		// 	padding-right: 75px
+	&__value
+		font-size: 18px
+		font-weight: bold
+		text-transform: none
+	&__holder
+		z-index: 5
+		position: absolute
+		right: 20px
+		top: -10px
+		width: 88px
+		height: 88px
+		+media-breakpoint-up(lg)
+			right: -30px
+			top: 20px
+			width: 103px
+			height: 103px
+		background-color: $accent
+		text-align: center
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		color: #fff
+		font-size: 11px
+		text-transform: uppercase
+		border-radius: 50%
+		line-height: 1
+		strong
+			display: block
+			font-size: 30px
+			font-weight: 700
+	&__content
+		padding: 10px
+		+media-breakpoint-up(lg)
+			padding: 20px 20px 20px 30px
+		+media-breakpoint-up(xl)
+			padding: 40px 40px 40px 60px
+	&__title
+		+media-breakpoint-down(lg)
+			padding-bottom: 10px
+		display: flex
+		line-height: 1.2
+		align-items: center
+		justify-content: space-between
+		a
+			font-size: 24px
+			text-decoration: underline
+			color: $accent
+			font-weight: normal
+			&:hover
+				text-decoration: none
+	&__btn
+		+media-breakpoint-up(lg)
+			max-width: 130px
+			margin-left: auto
+	&__description
+		+media-breakpoint-down(md)
+			display: none
+	&__description-toggle
+		+media-breakpoint-up(lg)
+			display: none
+		position: relative
+		padding-right: 20px
+		&::before
+			content: ''
+			position: absolute
+			right: 0
+			width: 15px
+			height: 15px
+			top: 20%
+			background-image: url('../i/chevron-down.svg')
+			background-position: center
+			background-size: 15px
+			+mt
+		&.active
+			&::before
+				transform: rotate(-180deg)
+	&__price
+		max-width: 130px
+		margin-left: auto
+		border: 1px solid #ccc
+		text-align: center
+		padding: 18px 0
+		font-size: 10px
+		font-weight: 700
+		margin-bottom: 15px
+	&__price-main
+		display: block
+		font-size: 26px
+		color: $accent
+	&__prop
+		min-width: 67px
+		text-align: center
+		font-size: 12px
+	&__propTitle
+		border-bottom: 1px solid #cccccc
+		line-height: 29px
+		position: relative
+	&__propValue
+		font-weight: bold
+		line-height: 12px
+		padding: 9px 0
+	&__hint
+		position: absolute
+		right: 0
+		top: 0
+		&:hover, &:focus
+			.catalogItem__hintHover
+				transform: scale(1)
+		span
+			width: 12px
+			height: 12px
+			display: block
+			border: solid 1px #cccccc
+			border-radius: 50%
+			font-size: 10px
+			line-height: 1
+	&__hintHover
+		+mt
+		transform: scale(0)
+		position: absolute
+		right: -40px
+		top: -50px
+		background-color: #fff
+		box-shadow: 0 3px 4px rgba(170,170,170,0.8)
+		padding: 5px
+		&::before
+			width: 0
+			height: 0
+			content: ''
+			position: absolute
+			top: 40px
+			left: 50%
+			z-index: 10
+			margin-left: -5px
+			border-top: 5px solid #fff
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+	&__body
+		ul
+			padding-left: 0
+		li
+			list-style: none
+			position: relative
+			padding-left: 20px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				width: 15px
+				height: 15px
+				+a-cent(y)
+				background-image: url('../i/check.svg')
+				background-position: center
+				background-size: 15px
+
+
+.slick-catalog
+	position: relative
+	margin-bottom: -7px !important
+	&:hover 
+		.slick-arrow
+			opacity: 1
+	&__slick-slide
+		position: relative
+		&:hover
+			img
+				transform: scale(1.3)
+		// height: 100% !important
+		img
+			width: 100%
+			transition: all 3s linear;
+	.photo-color
+		position: absolute
+		display: block
+		// width: 50px
+		// height: 30px
+		padding-left: 5px
+		padding-right: 5px
+		background-color: #fff
+		top: 20px
+		left: 20px
+		margin: 0
+		text-align: center
+		text-transform: uppercase
+		font-size: 10px
+		z-index: 70
+	.color_label 
+		display: block
+		height: 100%
+		span
+			display: block
+			height: 100%
+			color: #000
+	.slick-arrow
+		cursor: pointer
+		+mt
+		width: 24px
+		height: 45px
+		position: absolute
+		top: 50%
+		z-index: 104
+		background: rgba(0,0,0,0.7)
+		margin: -22px 0 0
+		border: none
+		+media-breakpoint-up(lg)
+			opacity: 0
+	.slick-next-cat
+		right: 0
+		border-radius: 24px 0 0 24px
+		&::before
+			content: ''
+			display: block
+			width: 11px
+			height: 11px
+			background: url("../i/right-arrow.svg") center no-repeat
+			background-size: 100%
+	.slick-prev-cat
+		left: 0
+		border-radius: 0 24px 24px 0
+		&::before
+			content: ''
+			display: block
+			width: 11px
+			height: 11px
+			background: url("../i/left-arrow.svg") center no-repeat
+			background-size: 100%
+	.slick-dots
+		position: absolute
+		left: auto
+		right: auto
+		bottom: 20px
+		line-height: 0
+		li
+			width: 24px
+			height: 24px
+			border: solid 2px #fff
+			button
+				display: block
+				width: 100% !important
+				height: 100% !important
+

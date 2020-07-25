@@ -1,0 +1,698 @@
+@import "vars"
+
+
+@media screen and (max-width: 1800px)
+	.main-slider
+		height: 479px
+		position: relative
+
+		&__arrow-left
+			left: 50px
+		&__arrow-right
+			right: 50px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 50%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 479px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-1800.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-1800.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-1800.jpg') center center
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-1800.jpg') center center
+
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-1800.jpg') center center
+
+@media screen and (max-width: 1280px)
+	.slick-dots
+		display: flex
+		flex-wrap: nowrap
+		justify-content: center
+		align-items: stretch
+		flex-direction: row
+		margin-top: 50px
+		padding-top: 50px
+		li 
+			margin: 0 5px
+			button
+				display: block
+				width: 7px
+				height: 7px
+				background-color: #7D818A
+				border: 0
+				border-radius: 50%
+				cursor: pointer
+				text-indent: -9999px
+				overflow: hidden
+	.slick-dots li.slick-active button, 
+	.slick-dots li:hover button
+		background: $accent
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 50px
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -20px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -20px
+
+
+/*==========  Desktop First  ==========*/
+
+// ≤1200px
++media-breakpoint-down(lg)
+
+	// Главный блок 
+	.top-line
+		height: 92px
+	.top-line .container .logo-wrapper img
+		height: 60px
+	.top-line .container .logo-wrapper .descr
+		font-size: 14px
+		line-height: 20px
+	.top-line .container .contacts-wrapper .button-wrapper button.button-g
+		font-size: 14px
+	.top-line .container .contacts-wrapper .phones-wrapper a
+		font-size: 16px
+
+	
+	.top-nav-wrapper .top-nav ul li a
+		font-size: 13px
+	
+
+	.main-slider
+		height: 306px
+		position: relative
+
+		&__arrow-left
+			left: 50px
+		&__arrow-right
+			right: 50px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 50%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 306px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-1200.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-1200.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-1200.jpg') center center
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-1200.jpg') center center
+
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-1200.jpg') center center
+
+	.main-slider__arrows
+		width: 50px
+
+	// Настройка секций с отступами и заголовков
+	.section-g
+		padding-top: 40px
+		padding-bottom: 30px
+		h2 
+			font-size: 26px
+
+	// Заголовки в items 
+	.advantages .items-wrapper__item .content-wrapper .title,
+	.catalog .items-wrapper__item .content-wrapper .title
+		font-size: 18px
+
+	// Преимущества
+	.advantages .items-wrapper__item .content-wrapper .subtitle
+		font-size: 14px
+		line-height: 21px
+	.advantages .items-wrapper__item .img-wrapper img
+		width: 60px
+	.catalog .items-wrapper__item
+		margin-right: 16px
+	.catalog .items-wrapper__item .content-wrapper .subtitle
+		font-size: 14px
+		line-height: 21px
+		height: 113px
+	.catalog .items-wrapper__item .content-wrapper button
+		font-size: 13px
+
+	// чек-лист 
+	
+	.checklist img.img-check
+		top: -81px
+		left: 17px
+		width: 353px
+	.checklist .title
+		font-size: 16px
+	.checklist button.button-g,
+	footer.footer .block2 button.button-g
+		font-size: 14px
+
+	// отзывы 
+	.reviews__slider-wrapper .review-slide .content-wrapper .title
+		font-size: 14px
+		line-height: 24px
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 35px
+		border-radius: 4px
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -25px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -25px
+
+	
+
+// ≤992px
++media-breakpoint-down(md)
+	
+	// Шапка 
+	.top-line
+		height: 77px
+	.top-line .container .logo-wrapper img
+		height: 51px
+	.top-line .container .logo-wrapper .descr
+		font-size: 12px
+		line-height: 16px
+	// кнопки 
+	.top-line .container .contacts-wrapper .button-wrapper button.button-g,
+	.catalog .items-wrapper__item .content-wrapper button,
+	.top-season__slider .slider-item .slider-item__wrapper button.button-g,
+	.checklist button.button-g, footer.footer .block2 button.button-g
+		font-size: 12px
+	.top-line .container .contacts-wrapper .phones-wrapper a
+		font-size: 14px
+
+	// меню 
+	.top-nav-wrapper .top-nav ul li a
+		font-size: 12px
+
+	// Слайдер 
+	.main-slider
+		height: 275px
+		position: relative
+
+		&__arrow-left
+			left: 50px
+		&__arrow-right
+			right: 50px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 50%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 275px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-992.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-992.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-992.jpg') center center
+
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-992.jpg') center center
+			
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-992.jpg') center center
+
+	.main-slider__arrows
+		width: 50px
+
+	// секции 
+	.section-g
+		padding-top: 25px
+		padding-bottom: 25px
+		h2 
+			font-size: 20px
+			margin-bottom: 20px
+			line-height: 32px
+	
+	// Заголовки 
+	.advantages .items-wrapper__item .content-wrapper .title, .catalog .items-wrapper__item .content-wrapper .title
+		font-size: 16px
+	.advantages .items-wrapper__item .content-wrapper .subtitle
+		font-size: 13px
+		line-height: 19px
+	
+	.advantages .items-wrapper__item .img-wrapper img
+		width: 47px
+
+	.catalog .items-wrapper__item
+		width: 80%
+		margin-left: auto
+		margin-right: auto
+	
+
+	// топ продаж
+	.top-season__slider .slider-item .slider-item__wrapper
+		width: 208px
+	.top-season__slider .slider-item .slider-item__wrapper button.button-g
+		width: 195px
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper
+		padding: 18px 10px
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .second-header
+		font-size: 19px
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .type-color
+		font-size: 16px
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .type-price
+		font-size: 14px
+		margin-top: 20px
+
+	//  с кровлей так же покупают
+	.upsale__slider .slider-item .slider-item__wrapper
+		width: 215px
+	.upsale__slider .slider-item .slider-item__wrapper .content-wrapper .first-header
+		font-size: 15px
+
+	// чек - лист 
+	.checklist img.img-check
+		top: -44px
+		left: -17px
+		width: 327px
+
+	// Отзывы 
+	.reviews__slider-wrapper .review-slide .content-wrapper .headtitle
+		font-size: 18px
+		margin-bottom: 7px
+	.reviews__slider-wrapper .review-slide .content-wrapper .subtitle a
+		font-size: 12px
+	.reviews__slider-wrapper .review-slide .content-wrapper .title
+		font-size: 12px
+		line-height: 21px
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 30px
+		border-radius: 4px
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -33px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -33px
+	
+
+
+
+
+	
+
+// ≤768px
++media-breakpoint-down(sm)
+	.top-line .container .logo-wrapper img
+		height: 38px
+	.top-line .container .logo-wrapper .descr
+		font-size: 10px
+		line-height: 14px
+	.top-line
+		height: 62px
+	.header
+		height: 62px
+		position: fixed
+		top: 0
+		width: 100%
+		background: #fff
+		z-index: 9
+		margin-top: 0!important
+		border-bottom: 1px solid rgba(1,0,0,.13)
+	body
+		margin-top: 62px
+	//#js-nav-container
+	//	height: -66px!important
+	//	display: none
+
+	// Слайдер 
+	.main-slider
+		height: 264px
+		position: relative
+
+		&__arrow-left
+			left: 30px
+		&__arrow-right
+			right: 30px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 40%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 264px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-768.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-768.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-768.jpg') center center
+
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-768.jpg') center center
+			
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-768.jpg') center center
+
+	.main-slider__arrows
+		width: 50px
+	
+	// Преимущства 
+	.advantages .items-wrapper__item
+		width: 49%
+	// каталог
+	.catalog .items-wrapper__item
+		width: 100%
+	// чек лист
+	.checklist img.img-check
+		display: none
+	// Отзывы
+	.reviews__slider-wrapper .review-slide .content-wrapper .headtitle
+		margin-top: 10px
+	// Галерея
+	.gallery-slider__item
+		width: 50%
+	
+	footer .block2
+		display: none
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 30px
+		border-radius: 4px
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -22px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -22px
+
+	
+
+
+// ≤576px
++media-breakpoint-down(xs)
+	// Слайдер 
+	.main-slider
+		height: 264px
+		position: relative
+
+		&__arrow-left
+			left: 30px
+		&__arrow-right
+			right: 30px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 40%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 264px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-576.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-576.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-576.jpg') center center
+
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-576.jpg') center center
+			
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-576.jpg') center center
+
+	.main-slider__arrows
+		width: 50px
+
+	.advantages .items-wrapper__item .content-wrapper .title, .catalog .items-wrapper__item .content-wrapper .title
+		line-height: 18px
+		margin-bottom: 6px
+	// Заголовки 3 уровня
+	.advantages .items-wrapper__item .content-wrapper .title, .catalog .items-wrapper__item .content-wrapper .title,
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .first-header
+		font-size: 15px
+	// Тайтлы 
+	.advantages .items-wrapper__item .content-wrapper .subtitle,
+	.catalog .items-wrapper__item .content-wrapper .subtitle
+		font-size: 12px
+		line-height: 20px
+	// Названия в топах
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .second-header
+		font-size: 16px
+	// Цвет 
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .type-color
+		font-size: 14px
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper .type-price
+		margin-top: 11px
+	// Высота блока топ
+	.top-season__slider .slider-item .slider-item__wrapper .content-wrapper
+		height: 149px
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 30px
+		border-radius: 4px
+		top: 38%
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -8px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -8px
+
+@media screen and (max-width: 480px)
+	// Слайдер 
+	.main-slider
+		height: 292px
+		position: relative
+
+		&__arrow-left
+			left: 15px
+		&__arrow-right
+			right: 15px
+		&__arrows
+			position: absolute
+			display: block
+			width: 70px
+			padding: 15px
+			border-radius: 50%
+			top: 40%
+			z-index: 2
+			cursor: pointer
+			background-color: rgba(0,0,0,.05)
+			transition: all ease .5s
+			&:hover
+				background-color: rgba(0,0,0,.3)
+
+		&-wrapper
+
+
+		&-wrapper__slide
+			height: 292px
+			cursor: pointer
+			background-size: cover
+
+		&-wrapper__slide-1
+			background: url('../i/main/slide-1-480.jpg') center center
+
+		&-wrapper__slide-2
+			background: url('../i/main/slide-2-480.jpg') center center
+
+		&-wrapper__slide-3
+			background: url('../i/main/slide-3-480.jpg') center center
+
+
+		&-wrapper__slide-4
+			background: url('../i/main/slide-4-480.jpg') center center
+			
+		&-wrapper__slide-5
+			background: url('../i/main/slide-5-480.jpg') center center
+
+	.main-slider__arrows
+		width: 50px
+
+
+	.top-line .container .logo-wrapper .descr
+		display: none
+	.section-g h2
+		font-size: 17px
+	// примущества
+	.advantages .items-wrapper__item
+		flex-direction: column
+		width: 50%
+	.advantages .items-wrapper__item .content-wrapper
+		margin-left: 0
+		margin-bottom: 25px
+		margin-top: 10px
+	// каталог 
+	.catalog .items-wrapper__item
+		flex-direction: column
+	//высота блока в каталоге 
+	.catalog .items-wrapper__item
+		height: 510px
+		width: 238px
+	// Высота заголовка
+	.catalog .items-wrapper__item .content-wrapper .title
+		height: 48px
+	// высота контентной части
+	.catalog .items-wrapper__item .content-wrapper .subtitle
+		height: 99px
+
+	// стрелки на слайдерах
+	.top-season__arrows,
+	.upsale__arrows,
+	.sertificate__arrows
+		height: 30px
+		border-radius: 4px
+		top: 38%
+	.top-season__arrow-right,
+	.upsale__arrow-right,
+	.sertificate__arrow-right
+		right: -8px
+	.top-season__arrow-left,
+	.upsale__arrow-left,
+	.sertificate__arrow-left
+		left: -8px
+	
+	.reviews__slider-wrapper .review-slide .content-wrapper .title
+		height: 316px
+	.reviews-arrows
+		height: 25px
+
+	
+	
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≥576px
++media-breakpoint-up(sm)
+
+// ≥768px
++media-breakpoint-up(md)
+
+// ≥992px
++media-breakpoint-up(lg)
+
+// ≥1200px
++media-breakpoint-up(xl)

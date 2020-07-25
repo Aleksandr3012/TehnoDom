@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'tdom';
+  src:  url('tdom.eot?me7oh8');
+  src:  url('tdom.eot?me7oh8#iefix') format('embedded-opentype'),
+    url('tdom.ttf?me7oh8') format('truetype'),
+    url('tdom.woff?me7oh8') format('woff'),
+    url('tdom.svg?me7oh8#tdom') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tdom' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bars:before {
+  content: "\e900";
+}
+.icon-arrows-2:before {
+  content: "\e901";
+}
+.icon-interface:before {
+  content: "\e902";
+}
+.icon-multimedia:before {
+  content: "\e903";
+}
+.icon-transport-1:before {
+  content: "\e904";
+}
+.icon-signs-1:before {
+  content: "\e905";
+}
+.icon-check-2:before {
+  content: "\e906";
+}
+.icon-technology-2:before {
+  content: "\e907";
+}
+.icon-up-arrow:before {
+  content: "\e908";
+}
+.icon-down-arrow:before {
+  content: "\e909";
+}
+.icon-money-1:before {
+  content: "\e90a";
+}
+.icon-signs:before {
+  content: "\e90b";
+}
+.icon-check-1:before {
+  content: "\e90c";
+}
+.icon-right-arrow-1:before {
+  content: "\e90d";
+}
+.icon-arrows-1:before {
+  content: "\e90e";
+}
+.icon-medal:before {
+  content: "\e90f";
+}
+.icon-box-1:before {
+  content: "\e910";
+}
+.icon-sport:before {
+  content: "\e911";
+}
+.icon-money:before {
+  content: "\e912";
+}
+.icon-transport:before {
+  content: "\e913";
+}
+.icon-shield:before {
+  content: "\e914";
+}
+.icon-right-arrow:before {
+  content: "\e915";
+}
+.icon-arrows:before {
+  content: "\e916";
+}
+.icon-video:before {
+  content: "\e917";
+}
+.icon-box:before {
+  content: "\e918";
+}
+.icon-check:before {
+  content: "\e919";
+}
+.icon-technology-1:before {
+  content: "\e91a";
+}
+.icon-tool:before {
+  content: "\e91b";
+}
+.icon-whatsapp:before {
+  content: "\e91c";
+}
+.icon-viber:before {
+  content: "\e91d";
+}
+.icon-technology:before {
+  content: "\e91e";
+}

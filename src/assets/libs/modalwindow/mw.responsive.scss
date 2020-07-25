@@ -1,0 +1,214 @@
+/*=================================== Adaptive ===================================*/
+@media (max-width: 1199px) {
+
+
+    .hs-b-btn{
+        font-size: 22px;
+    }
+
+    .hs-b-btn_small{
+        font-size: 13px;
+        padding: 10px 15px 8px 15px;
+        line-height: 24px;
+    }
+
+    
+    .hs-b-small-contact__item{
+        font-size: 11px;
+    }
+
+}
+@media (max-width: 991px) {
+
+    
+
+    .hs-b-btn{
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    
+    .hs-b-btn_small{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+
+    .hs-b-form{
+        padding: 15px;
+    }
+    .hs-b-form__header-title{
+        font-size: 26px;
+    }
+
+
+    .hs-b-modal{
+        padding: 50px 25px 50px 25px;
+    }
+    .hs-b-modal_form .hs-b-form__header{
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 767px) {
+    
+
+    .hs-b-modal{
+        padding: 50px 15px 25px 15px;
+    }
+
+    .hs-b-form__header{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .hs-b-form__header-title{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px){
+    
+
+    .hs-b-btn{
+        font-size: 15px;
+        padding: 15px 15px 13px 15px;
+    }
+    
+    .hs-b-btn_small{
+        font-size: 11px;
+        padding: 10px 15px 8px 15px;
+        line-height: 24px;
+    }
+
+    .hs-input-text,
+    .hs-textarea {
+        margin: 0;
+        padding: 15px 15px 15px 15px;
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .hs-input-container__icon .fa {
+        display: none;
+    }
+    .hs-b-form__header .hs-b-form__header-title {
+        margin: 0 0 15px;
+        font-size: 26px;
+    }
+    .hs-b-form__content button {
+        font-size: 18px;
+    }
+
+
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 390px) {
+    .hs-input-container .hs-input-text {
+        font-size: 14px;
+    }
+    .hs-b-form__header .hs-b-form__header-title {
+        margin: 0 0 15px;
+        font-size: 20px;
+    }
+    .hs-b-modal_form .hs-b-form__header {
+        font-size: 12px;
+    }
+    .hs-b-form__content button {
+        font-size: 15px;
+    }
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+/*=================================== Adaptive ===================================*/
+@media (max-width: 1199px) {
+
+
+    .b-btn{
+        font-size: 22px;
+
+    .b-btn_small{
+        font-size: 13px;
+        padding: 10px 15px 8px 15px;
+        line-height: 24px;
+    }
+
+    
+    .b-small-contact__item{
+        font-size: 11px;
+    }
+
+}
+@media (max-width: 991px) {
+
+    
+
+    .b-btn{
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    
+    .b-btn_small{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+
+    .b-form{
+        padding: 15px;
+    }
+    .b-form__header-title{
+        font-size: 26px;
+    }
+
+
+    .b-modal{
+        padding: 50px 25px 50px 25px;
+    }
+    .b-modal_form .b-form__header{
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 767px) {
+    
+
+    .b-modal{
+        padding: 50px 15px 25px 15px;
+    }
+
+    .b-form__header{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .b-form__header-title{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px){
+    
+
+    .b-btn{
+        font-size: 15px;
+        padding: 15px 15px 13px 15px;
+    }
+    
+    .b-btn_small{
+        font-size: 11px;
+        padding: 10px 15px 8px 15px;
+        line-height: 24px;
+    }
+
+    .input-text,
+    textarea {
+        margin: 0;
+        padding: 15px 15px 15px 15px;
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+
+}
+}

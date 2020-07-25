@@ -1,0 +1,1011 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "slick-styles"
+
+
+
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	font-weight: 200
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.block-center
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+/* Дизайн мобильного меню*/
+
+/* Полотно меню	*/
+.menu
+	background-color: #ffffff
+	position: fixed
+	top: -100vh
+	width: 100vw
+	height: 100vh
+	z-index: 999
+	display: flex
+	justify-content: center
+	align-items: center
+	/*right: -100vw*/
+	transition: all 0.5s
+.menu ul
+	list-style: none
+	padding: 0
+	text-align: center
+.menu ul li 
+	width: 100vw
+.menu ul li a 
+	display: block
+	width: 100%
+	line-height: 3
+	letter-spacing: 1px
+	color: #212529
+	transition: all .2s
+	font-size: 14px
+	font-weight: 400
+.menu ul li a:hover
+	/*background-color: $accent*/
+	text-decoration: none
+	/*border-bottom: 1px solid $accent*/
+	color: $accent
+
+
+
+.menu_active
+	top: 0
+
+.mobile-menu-line a
+	color: #ffffff
+
+/* Стилизация гамбургера*/
+.menu-link 
+	display: block
+	position: fixed
+	width: 40px
+	height: 40px
+	top: 10px
+	right: 20px
+	border-radius: 4%
+	z-index: 9999
+	background-color: $accent
+.menu-link span, 
+.menu-link span:after, 
+.menu-link span:before
+	display: block
+	position: absolute
+	width: 18px
+	height: 2px
+	background-color: #fff
+	left: 50%
+	margin-left: -9px
+	top: 50%
+	margin-top: -1px
+
+.menu-link span:before
+	transition: all 0.2s
+	content: ''
+	margin-top: -8px
+.menu-link span:after
+	transition: all 0.2s
+	content: ''
+	margin-top: 6px
+
+.menu-link_active
+	position: fixed
+
+.menu-link_active span
+	background-color: transparent
+
+.menu-link_active span:before
+	transform: rotate(135deg)
+	margin-top: 0
+.menu-link_active span:after
+	transform: rotate(-135deg)
+	margin-top: 0
+
+/* Кнопка звонка */
+.responsive_callback_btn
+	display: block
+	position: fixed
+	width: 40px
+	height: 40px
+	border-radius: 4%
+	top: 10px
+	right: 70px
+	background-color: $accent
+	z-index: 10
+.responsive_callback_btn i 
+	color: #ffffff
+	position: absolute
+	top: 9px
+	left: 12px
+	font-size: 22px
+
+
+
+@keyframes line-effect
+	0%
+		left: -30px
+		margin-left: 0
+	30%
+		left: 110%
+		margin-left: 80px
+	to 
+		left: 110%
+		margin-left: 80px
+
+@keyframes pulse
+	0%
+		-webkit-box-shadow: 0 0 0 0 $accent
+		box-shadow: 0 0 0 0 $accent
+	70%
+		-webkit-box-shadow: 0 0 20px 30px rgba(204, 169, 44, 0)
+		box-shadow: 0 0 20px 30px rgba(204, 169, 44, 0)
+	100%
+		-webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0)
+		box-shadow: 0 0 0 0 rgba(204, 169, 44, 0)
+
+button.button-g
+	font-weight: 200
+	border: none!important
+	outline: none!important
+	background-color: $accent
+	color: white
+	position: relative
+	transition: all .5s ease
+	overflow: hidden
+	border-radius: 4px
+	cursor: pointer
+
+	&:hover, &:focus
+		animation: pulse 1s
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 30px
+		height: 300px
+		margin-left: 60px
+		background-color: rgba(255,255,255,.4)
+		left: -40px
+		top: -150px
+		z-index: 1
+		transform: rotate(45deg)
+		transition: 0.1s initial
+		animation: line-effect 3s .05s ease-in-out infinite
+
+
+
+
+a 
+	color: $text-color
+	transition: all .5s ease
+	&:hover, &:active, &:visited, &:focus
+		text-decoration: none
+		color: lighten($text-color, 10%)
+
+
+.section-g
+	padding-top: 60px
+	padding-bottom: 50px
+	h2 
+		font-size: 32px
+		line-height: 40px
+		margin-top: 0
+		font-weight: 400
+		text-align: center
+		margin-bottom: 50px
+
+
+
+
+
+
+
+
+
+/* Оглавление:
+
+	1. top-line
+	2. top-nav-wrapper
+	3. main-slider
+	4. advantages
+	5. catalog
+	6. top-season
+	7. upsale
+	8. checklist
+	9. reviews
+	10. sertificate
+	
+
+	 */
+
+
+/* 1. top-line*/
+
+.top-line
+	height: 110px
+	padding: 
+		top: 12px
+		bottom: 12px
+	.container
+		display: flex
+		justify-content: space-between
+		.logo-wrapper
+			display: flex
+			align-items: center
+			img 
+				height: 85px
+				width: auto
+				margin-right: 15px
+			.descr
+				font-size: 16px
+				line-height: 24px
+		
+		.contacts-wrapper
+			display: flex
+			align-items: center
+			.button-wrapper
+				button.button-g
+					padding: 5px 25px
+			.phones-wrapper
+				display: flex
+				flex-direction: column
+				margin-left: 55px
+				a 
+					font-size: 20px
+					font-weight: 700
+					img 
+						width: 15px
+
+/* 2. top-nav-wrapper*/
+
+header .nav-fixed
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 4
+
+.top-nav-wrapper
+	position: relative
+	width: 100%
+	height: 45px
+	z-index: 1
+	.top-nav
+		position: relative
+		top: 0
+		border-top: 1px solid #e7e7e7
+		border-bottom: 1px solid #e7e7e7
+		box-shadow: 0 1px #fff inset
+		width: 100%
+		background: linear-gradient(rgb(240, 240, 240) 0%, rgb(255, 255, 255) 100%)
+
+		ul 
+			display: table
+			text-align: center
+			width: 100%
+			margin: 0
+			padding: 0
+			list-style: none
+			li 
+				transition: all 0.1s linear 1s
+				font-size: 14px
+				text-transform: uppercase
+				letter-spacing: -0.5px
+				display: table-cell
+				vertical-align: middle
+				font-weight: bold
+				color: $text-color				
+				a 
+					transition: all 0.1s 
+					padding: 12px 10px
+					position: relative
+					z-index: 2
+					display: block
+					&:hover
+						color: red
+						/*outline: none*/
+						background: linear-gradient( rgb(255, 255, 255) 100%, rgb(240, 240, 240) 0%)
+					
+
+			li:first-child > a::before
+				width: 1px
+				height: 20px
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				left: 0
+				background: #e7e7e7
+				margin: -10px 0 0 
+				transition: all .1s linear 0s
+			li > a::after
+				width: 1px
+				height: 20px
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				right: 0
+				background: #e7e7e7
+				margin: -10px 0 0 
+				transition: all .1s linear 0s
+
+/* 3. main-slider*/
+
+.main-slider
+	height: 533px
+	position: relative
+	overflow: hidden
+
+	&__arrow-left
+		left: 50px
+	&__arrow-right
+		right: 50px
+	&__arrows
+		position: absolute
+		display: block
+		width: 70px
+		padding: 15px
+		border-radius: 50%
+		top: 50%
+		z-index: 2
+		cursor: pointer
+		background-color: rgba(0,0,0,.05)
+		transition: all ease .5s
+		&:hover
+			background-color: rgba(0,0,0,.3)
+	
+	&-wrapper
+		
+		
+	&-wrapper__slide
+		height: 533px
+		cursor: pointer
+		background-size: cover
+	
+	&-wrapper__slide-1
+		background: url('../i/main/slide-1.jpg') center center
+	
+	&-wrapper__slide-2
+		background: url('../i/main/slide-2.jpg') center center
+	
+	&-wrapper__slide-3
+		background: url('../i/main/slide-3.jpg') center center
+	
+	&-wrapper__slide-4
+		background: url('../i/main/slide-4.jpg') center center
+	
+	&-wrapper__slide-5
+		background: url('../i/main/slide-5.jpg') center center
+		
+/* 4. advantages*/
+
+.advantages
+	background-color: #f0f0f0
+	.items-wrapper
+		
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+
+
+		&__item
+			width: 33%
+			display: flex
+			align-items: flex-start
+			.img-wrapper
+				img
+					width: 81px
+			.content-wrapper
+				margin-left: 19px
+				padding-right: 15px
+				margin-bottom: 45px
+				.title
+					font-size: 22px
+					line-height: 22px
+					font-weight: 400
+					margin-bottom: 13px
+					margin-top: 0
+				.subtitle
+					font-size: 16px
+					font-weight: 400
+					line-height: 24px
+
+
+/* 5. catalog*/
+
+.catalog 
+	.items-wrapper
+		display: flex
+		flex-wrap: wrap
+		&__item
+			width: 48%
+			height: 270px
+			display: flex
+			margin-bottom: 35px
+			margin-right: 20px
+			border-radius: 4px
+			overflow: hidden
+			box-shadow: 6.472px 4.702px 13px 0px rgba(1, 0, 0, 0.13)
+			transition: all .5s ease
+			cursor: pointer
+			&:hover
+				box-shadow: 16.773px 10.893px 13px 0px rgba(1, 0, 0, 0.13)
+			.img-wrapper
+				img 
+				display: block
+				max-width: 100%
+			.content-wrapper
+				padding: 20px 20px 15px 15px
+
+				
+				.title
+					height: 59px
+					font-size: 22px
+					font-weight: 400
+					line-height: 28px
+					margin-bottom: 10px
+				.subtitle
+					height: 95px
+					font-weight: 400
+					margin-bottom: 15px
+					font-size: 15px
+					line-height: 24px
+				button
+					font-size: 15px
+					padding: 7px 25px
+
+
+/* 6.  top-season*/
+
+
+.top-season
+	background: url('../i/top/bg.jpg') center top no-repeat
+	position: relative
+
+	h2 
+		color: white
+	
+	/* стилизация стрелок слайдера*/
+	&__arrows
+		position: absolute
+		top: 40%
+		height: 60px
+		z-index: 2
+		cursor: pointer
+		padding: 10px
+		border-radius: 50%
+		background-color: lighten($accent, 5)
+		transition: all ease .5s
+		&:hover
+			background-color: lighten($accent, 0)
+	&__arrow-left
+		left: -70px
+	&__arrow-right
+		right: -70px
+
+	&__slider
+
+		.slider-item
+			
+			.slider-item__wrapper
+				margin-left: auto
+				margin-right: auto
+				width: 262px
+				border-radius: 4px
+				background-color: #fff
+				overflow: hidden
+				box-shadow: 6.472px 4.702px 13px 0px rgba(1, 0, 0, 0.13)
+				transition: all .5s ease
+				&:hover
+					box-shadow: 16.773px 10.893px 13px 0px rgba(1, 0, 0, 0.13)
+				.img-wrapper
+					position: relative
+					&::before 
+						content: 'Топ продаж'
+						position: absolute
+						top: 9px
+						left: 9px
+						font-size: 14px
+						font-weight: 200
+						color: white
+						padding: 5px
+						background-color: $accent
+						border-radius: 2px
+					img 
+						max-width: 100%		
+				.content-wrapper
+					padding: 32px 14px
+					height: 170px
+					.first-header
+						font-size: 17px
+						font-weight: 400
+					.second-header
+						font-size: 21px
+						font-weight: 400
+					.type-color
+						font-weight: 200
+						font-size: 17px
+						span 
+							font-size: 17px
+							font-weight: 400
+					.type-price
+						font-size: 15px
+						font-weight: 400
+						span 
+							font-size: 17px
+							font-weight: 600
+							color: $accent
+				/*стилизация кнопки	*/
+				button.button-g
+					margin: 14px
+					padding-top: 8px
+					padding-bottom: 8px
+					width: 230px
+					display: block
+					margin-left: auto
+					margin-right: auto
+
+/* upsale с кровлей так же покупают*/
+
+.upsale
+	/* стилизация стрелок слайдера*/
+	&__arrows
+		position: absolute
+		top: 30%
+		height: 60px
+		z-index: 2
+		cursor: pointer
+		padding: 10px
+		border-radius: 50%
+		background-color: lighten($accent, 5)
+		transition: all ease .5s
+		&:hover
+			background-color: lighten($accent, 0)
+	&__arrow-left
+		left: -70px
+	&__arrow-right
+		right: -70px
+
+	&__slider
+		.slider-item
+			.slider-item__wrapper
+				margin-left: auto
+				margin-right: auto
+				width: 250px
+				border-radius: 4px
+				background-color: #fff
+				overflow: hidden
+				box-shadow: 4.472px 4.702px 13px 0px rgba(1, 0, 0, 0.05)
+				transition: all .5s ease
+				cursor: pointer
+				&:hover
+					box-shadow: 6.773px 7.893px 13px 0px rgba(1, 0, 0, 0.1)
+				.img-wrapper
+					img 
+						max-width: 100%		
+				.content-wrapper
+					padding: 22px 14px
+					.first-header
+						font-size: 17px
+						font-weight: 400
+
+/* checklist*/
+
+.checklist
+	background: url('../i/check/bg.jpg') center top no-repeat
+	/*position: relative*/
+	padding-top: 100px
+	padding-bottom: 100px
+	.container
+		position: relative
+	h2 
+		color: white
+		text-align: left
+		margin-bottom: 15px
+		font-weight: 700
+	.title
+		text-align: left
+		color: white
+		font-weight: 500
+		font-size: 18px
+		span 
+			font-weight: 700
+			background-color: $accent
+	button.button-g
+		margin-top: 30px
+		padding: 10px 17px
+	img.img-check
+		position: absolute
+		top: -126px
+		left: -48px
+		width: 500px
+
+
+/* 9. reviews*/
+
+.reviews
+
+	&-arrows 
+		position: absolute
+		height: 35px
+		z-index: 2
+		bottom: 20px
+		cursor: pointer
+		&__left-arrow
+			right: 100px
+		&__right-arrow	
+			right: 40px
+
+	&__slider-wrapper
+		border-radius: 4px
+		position: relative
+		padding: 15px
+		box-shadow: 2.457px 1.721px 21px 0 rgba(0,0,0,.29)
+
+		.review-slide
+			/*display: flex*/
+
+			.img-wrapper
+				position: relative
+				overflow: hidden
+				/*width: 500px*/
+				border-radius: 4px
+				img 
+					max-width: 100%
+				span.play-icon
+					img 
+						display: block
+						position: absolute
+						width: 60px
+						z-index: 3
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+				.pulse-bg
+					position: absolute
+					top: 0
+					z-index: 4
+					transform: translate(-50%, -50%)
+					top: 50%
+					left: 50%
+					width: 120px
+					height: 120px
+					border-radius: 50%
+					/*background-color: #fff*/
+					.pulse-bg-container 
+						width: 100%
+						height: 100%
+						position: absolute
+						top: 0
+						left: 0
+						animation: play-buttons infinite ease-in-out 2s
+						.pulse-bg-circle1
+							width: 100%
+							height: 100%
+						.pulse-bg-circle2
+							width: 85%
+							height: 85%
+						.pulse-bg-circle3
+							width: 70%
+							height: 70%
+						.pulse-bg-circle
+							border: 2px solid $accent
+							border-radius: 50%
+							position: absolute
+							left: 50%
+							top: 50%
+							transform: translate(-50%, -50%)
+				
+			
+			.content-wrapper
+				.headtitle
+					font-size: 22px
+					font-weight: 400
+					margin-bottom: 10px
+				.subtitle
+					margin-bottom: 10px
+					a 
+						color: #145bbc
+						text-decoration: underline
+						font-size: 14px
+				.title
+					font-size: 16px
+					line-height: 26px
+					height: 210px
+
+@keyframes play-buttons
+	0%
+		transform: scale(0.8)
+		opacity: 0
+	50%
+		opacity: 1
+	to 
+		transform: scale(1)
+		opacity: 0
+
+
+/* 10. sertificate*/
+
+.sertificate
+	background-color: #f0f0f0
+
+
+	
+
+
+	&__slider
+		position: relative
+		a 
+			display: block
+			margin-left: auto
+			margin-right: auto
+			img 
+				margin-left: auto
+				margin-right: auto
+
+	&__arrows
+		position: absolute
+		top: 40%
+		height: 60px
+		z-index: 2
+		cursor: pointer
+		padding: 10px
+		border-radius: 50%
+		background-color: lighten($accent, 5)
+		transition: all ease .5s
+		&:hover
+			background-color: lighten($accent, 0)
+	&__arrow-left
+		left: -70px
+	&__arrow-right
+		right: -70px
+		
+
+/* Галерея*/
+
+
+.gallery-slider
+	&__slide
+		display: flex!important
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: stretch
+		flex-direction: row
+	&__item
+		width: 25%
+		padding: 3px
+		overflow: hidden
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			top: 3px
+			right: 3px
+			bottom: 3px
+			left: 3px
+			transition: .3s
+		&:hover::after
+			background: rgba(227, 30, 54, .1)
+			z-index: 2
+		img 
+			display: block
+			width: 100%
+			object-fit: cover
+	
+	.slick-dots
+		display: flex
+		flex-wrap: nowrap
+		justify-content: center
+		align-items: stretch
+		flex-direction: row
+		margin-top: 30px
+		li 
+			margin: 0 5px
+			button
+				display: block
+				width: 7px
+				height: 7px
+				background-color: #7D818A
+				border: 0
+				border-radius: 50%
+				cursor: pointer
+				text-indent: -9999px
+				overflow: hidden
+	.slick-dots li.slick-active button, 
+	.slick-dots li:hover button
+		background: $accent
+
+/* map*/
+
+.contacts.section-g 
+	background-color: #fcfcfc
+	padding-bottom: 0
+
+.map-container
+	position: relative
+	height: 600px
+	.contacts-map
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+
+
+/* footer*/
+
+footer.footer 
+	background: #414042
+	.block1
+		display: flex
+		align-items: flex-start
+		.img-wrapper
+			width: 300px
+			img 
+				max-width: 100%
+		.copyright-wrapper
+			margin-left: 10px
+			font-size: 12px
+			color: #ffffff
+			font-weight: 200
+			line-height: 18px
+	
+	.block2
+		button.button-g
+			background-color: transparent
+			border: 1px solid #ffffff!important
+			padding: 5px 30px
+			display: block
+			margin-left: auto
+			margin-right: auto
+
+	.block3
+
+		text-align: right
+		a 
+			display: block
+			color: #ffffff
+			font-weight: 400
+		.time-of-work
+			margin-top: 10px
+			color: #ffffff
+			font-size: 14px
+			font-weight: 400
+
+
+
+
+// catalog-section
+
+.catalog-section
+	background-image: none
+	background: #ffffff
+	border-bottom: 1px solid #e7e7e7
+	.container .row .col-12 h2 
+		color: #151516
+
+.catalog-section-grey
+	background-image: none
+	background: #f0f0f0
+	border-bottom: 1px solid #e7e7e7
+	.container .row .col-12 h2 
+		color: #151516
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new-politics*/
+.new-politics
+	
+	a 
+		text-align: center
+		display: block
+		margin-top: 25px
+		margin-bottom: 15px
+		margin-left: auto
+		margin-right: auto
+		font-size: 12px
+		color: #ffffff
+		transition: all .6s ease
+		border-bottom: 1px dotted transparent
+		&:hover
+			color: #ffffff
+			border-bottom: 1px dotted #ffffff
+			text-decoration: none
+
+
+/* site-developers*/
+
+.site-developers
+	margin-left: auto
+	margin-right: auto
+
+	&__wrapper
+		color: #ffffff
+		font-size: 11px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		a 
+			color: rgb(240, 240, 240)
+			transition: all .6s ease
+			border-bottom: 1px dotted transparent
+			&:hover
+				text-decoration: none
+				border-bottom: 1px dotted rgb(240, 240, 240)
+
+
+
+
+#scroll-to-top
+	bottom: 0
+	cursor: pointer
+	display: none
+	position: fixed
+	right: 0
+	z-index: 3
+	
+
+
+
+
+@import "media" /* Always at the end*/
+@import "map"
+@import "dop"
