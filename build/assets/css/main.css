@@ -11361,25 +11361,25 @@ a {
     }
 }
 
-.btn-red {
-    display: block;
-    text-align: center;
-    background-color: #e31e36;
-    border: solid 1px #e31e36;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-}
-
-.btn-red:hover {
-    background-color: #fff;
-    color: #e31e36;
-}
-
 .catalogInner {
     background-color: #f0f0f0;
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.catalogInner h2 {
+    margin-bottom: 25px;
+}
+
+.top-gibkaya {
+    background-image: url("../i/gibkaya-bg.jpg");
+    background-size: 100%;
+    background-position: center;
+    color: #fff;
+}
+
+.top-gibkaya h2 {
+    text-shadow: 0 1px 4px #000;
 }
 
 .catalogItem {
@@ -11453,11 +11453,12 @@ a {
 
 @media (min-width: 1200px) {
     .catalogItem__content {
-        padding: 40px 40px 40px 60px;
+        padding: 25px 40px 25px 60px;
     }
 }
 
 .catalogItem__title {
+    padding-bottom: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11468,12 +11469,6 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-}
-
-@media (max-width: 1199.98px) {
-    .catalogItem__title {
-        padding-bottom: 10px;
-    }
 }
 
 .catalogItem__title a {
@@ -11487,8 +11482,14 @@ a {
     text-decoration: none;
 }
 
+.catalogItem__btn {
+    width: 100%;
+}
+
 @media (min-width: 992px) {
     .catalogItem__btn {
+        display: block;
+        padding: 15px 10px;
         max-width: 130px;
         margin-left: auto;
     }
@@ -11624,6 +11625,7 @@ a {
 }
 
 .catalogItem__body li {
+    padding-bottom: 5px;
     list-style: none;
     position: relative;
     padding-left: 20px;
@@ -11648,7 +11650,8 @@ a {
 
 .slick-catalog {
     position: relative;
-    margin-bottom: -7px !important;
+    margin-bottom: 0px !important;
+    height: 100%;
 }
 
 .slick-catalog:hover .slick-arrow {
@@ -11656,6 +11659,8 @@ a {
 }
 
 .slick-catalog__slick-slide {
+    height: 100% !important;
+    display: block !important;
     position: relative;
 }
 
@@ -11675,15 +11680,14 @@ a {
 .slick-catalog .photo-color {
     position: absolute;
     display: block;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px 10px;
     background-color: #fff;
     top: 20px;
     left: 20px;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     z-index: 70;
 }
 
@@ -11696,6 +11700,10 @@ a {
     display: block;
     height: 100%;
     color: #000;
+}
+
+.slick-catalog .color_label strong {
+    font-weight: 700;
 }
 
 .slick-catalog .slick-arrow {
@@ -11751,6 +11759,15 @@ a {
     position: absolute;
     left: auto;
     right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     bottom: 20px;
     line-height: 0;
 }
