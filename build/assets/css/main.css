@@ -11363,8 +11363,15 @@ a {
 
 .catalogInner {
     background-color: #f0f0f0;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .catalogInner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 
 .catalogInner h2 {
@@ -11389,6 +11396,12 @@ a {
 
 .catalogItem__col {
     position: relative;
+}
+
+@media (min-width: 1200px) {
+    .catalogItem__col {
+        padding-right: 0;
+    }
 }
 
 .catalogItem__value {
@@ -11442,12 +11455,18 @@ a {
 }
 
 .catalogItem__content {
-    padding: 10px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .catalogItem__content {
+        padding: 20px 20px 20px 0;
+    }
 }
 
 @media (min-width: 992px) {
     .catalogItem__content {
-        padding: 20px 20px 20px 30px;
+        padding: 20px;
     }
 }
 
@@ -11471,25 +11490,30 @@ a {
     justify-content: space-between;
 }
 
-.catalogItem__title a {
+.catalogItem__title button {
+    text-align: left;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
     font-size: 24px;
     text-decoration: underline;
     color: #e31e36;
     font-weight: normal;
 }
 
-.catalogItem__title a:hover {
+.catalogItem__title button:hover {
     text-decoration: none;
 }
 
 .catalogItem__btn {
     width: 100%;
+    padding: 15px 10px;
 }
 
 @media (min-width: 992px) {
     .catalogItem__btn {
         display: block;
-        padding: 15px 10px;
         max-width: 130px;
         margin-left: auto;
     }
@@ -11648,10 +11672,15 @@ a {
     background-size: 15px;
 }
 
+.modal-gibkaya .hs-b-form__header-title {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .slick-catalog {
     position: relative;
     margin-bottom: 0px !important;
-    height: 100%;
 }
 
 .slick-catalog:hover .slick-arrow {
@@ -11659,7 +11688,6 @@ a {
 }
 
 .slick-catalog__slick-slide {
-    height: 100% !important;
     display: block !important;
     position: relative;
 }
@@ -11707,6 +11735,7 @@ a {
 }
 
 .slick-catalog .slick-arrow {
+    outline: none;
     cursor: pointer;
     -webkit-transition: all 0.36s;
     -o-transition: all 0.36s;

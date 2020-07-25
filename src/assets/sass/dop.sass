@@ -51,8 +51,11 @@ a
 //main stylet
 .catalogInner
 	background-color:	#f0f0f0
-	padding-top: 80px
-	padding-bottom: 80px
+	padding-top: 40px
+	padding-bottom: 40px
+	+media-breakpoint-up(xl)
+		padding-top: 70px
+		padding-bottom: 70px
 	h2
 		margin-bottom: 25px
 
@@ -69,9 +72,8 @@ a
 	background-color: #fff
 	&__col
 		position: relative
-		// +media-breakpoint-up(lg)
-		// 	padding-left: 0
-		// 	padding-right: 75px
+		+media-breakpoint-up(xl)
+			padding-right: 0
 	&__value
 		font-size: 18px
 		font-weight: bold
@@ -104,9 +106,11 @@ a
 			font-size: 30px
 			font-weight: 700
 	&__content
-		padding: 10px
+		padding: 20px
+		+media-breakpoint-up(md)
+			padding: 20px 20px 20px 0
 		+media-breakpoint-up(lg)
-			padding: 20px 20px 20px 30px
+			padding: 20px
 		+media-breakpoint-up(xl)
 			padding: 25px 40px 25px 60px
 	&__title
@@ -116,7 +120,12 @@ a
 		line-height: 1.2
 		align-items: center
 		justify-content: space-between
-		a
+		button
+			text-align: left
+			outline: none
+			padding: 0
+			border: none
+			background-color: transparent
 			font-size: 24px
 			text-decoration: underline
 			color: $accent
@@ -125,9 +134,9 @@ a
 				text-decoration: none
 	&__btn
 		width: 100%
+		padding: 15px 10px
 		+media-breakpoint-up(lg)
 			display: block
-			padding: 15px 10px
 			max-width: 130px
 			margin-left: auto
 	&__description
@@ -232,11 +241,15 @@ a
 				background-position: center
 				background-size: 15px
 
-
+.modal-gibkaya
+	.hs-b-form__header-title
+		max-width: 350px
+		margin-left: auto
+		margin-right: auto
 .slick-catalog
 	position: relative
 	margin-bottom: 0px !important
-	height: 100%
+	// height: 100%
 	&:hover 
 		.slick-arrow
 			opacity: 1
@@ -247,7 +260,7 @@ a
 	// 	// div
 	// 	// 	height: 100%
 	&__slick-slide
-		height: 100% !important
+		// height: 100% !important
 		display: block !important
 		position: relative
 		&:hover
@@ -281,6 +294,7 @@ a
 		strong
 			font-weight: 700;
 	.slick-arrow
+		outline: none
 		cursor: pointer
 		+mt
 		width: 24px
