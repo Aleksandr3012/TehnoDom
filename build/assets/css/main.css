@@ -11496,10 +11496,16 @@ a {
     padding: 0;
     border: none;
     background-color: transparent;
-    font-size: 24px;
+    font-size: 18px;
     text-decoration: underline;
     color: #e31e36;
     font-weight: normal;
+}
+
+@media (min-width: 992px) {
+    .catalogItem__title button {
+        font-size: 24px;
+    }
 }
 
 .catalogItem__title button:hover {
