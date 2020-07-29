@@ -11442,10 +11442,16 @@ a {
 
 @media (min-width: 992px) {
     .catalogItem__holder {
-        right: -30px;
+        right: -20px;
         top: 20px;
         width: 103px;
         height: 103px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalogItem__holder {
+        right: -50px;
     }
 }
 
